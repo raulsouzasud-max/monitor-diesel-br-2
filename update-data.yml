@@ -1,0 +1,38 @@
+name: Atualizar dados ANP — Diesel BR
+
+on:
+  schedule:
+    # Toda sexta-feira às 18h (horário de Brasília = 21h UTC)
+    - cron: '0 21 * * 5'
+  workflow_dispatch:
+    # Permite executar manualmente pelo painel do GitHub
+
+jobs:
+  fetch-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependências
+        run: |
+          pip install requests pdfplumber
+
+      - name: Executar coleta ANP
+        run: python scripts/fetch_anp.py
+
+      - name: Commit e push dos dados atualizados
+        run: |
+          git config user.name  "Monitor Diesel Bot"
+          git config user.email "bot@monitor-diesel-br.vercel.app"
+          git add data/diesel.json
+          git diff --staged --quiet || git commit -m "data: atualização automática ANP $(date +'%d/%m/%Y')"
+          git push

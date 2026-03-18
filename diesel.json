@@ -1,0 +1,49 @@
+{
+  "referencia": "08/03/2026 a 14/03/2026",
+  "edicao": "11/2026",
+  "atualizado_em": "2026-03-14",
+  "nacional": {
+    "s10": 6.89,
+    "s500": 6.52,
+    "variacao_semanal_s10": 12.03
+  },
+  "regioes": {
+    "Norte":        { "s10": 7.15, "variacao": 14.7  },
+    "Centro-Oeste": { "s10": 6.95, "variacao": 11.6  },
+    "Sul":          { "s10": 6.85, "variacao": 14.2  },
+    "Sudeste":      { "s10": 6.68, "variacao": 10.1  },
+    "Nordeste":     { "s10": 6.55, "variacao":  9.4  }
+  },
+  "capitais": [
+    { "capital": "Cuiabá (MT)",    "regiao": "Centro-Oeste", "s10": 7.21, "variacao": 14.08 },
+    { "capital": "Palmas (TO)",    "regiao": "Norte",        "s10": 7.11, "variacao": 14.68 },
+    { "capital": "Curitiba (PR)",  "regiao": "Sul",          "s10": 6.91, "variacao": 14.21 },
+    { "capital": "Salvador (BA)",  "regiao": "Nordeste",     "s10": 6.90, "variacao":  9.35 },
+    { "capital": "São Paulo (SP)", "regiao": "Sudeste",      "s10": 6.78, "variacao": 10.06 }
+  ],
+  "extremos": {
+    "mais_caro":   { "estado": "Roraima (RR)",    "preco": 7.84 },
+    "mais_barato": { "estado": "Pernambuco (PE)", "preco": 6.23 }
+  },
+  "refinaria": {
+    "diesel_a": 3.65,
+    "participacao_posto": 3.10,
+    "data_reajuste": "14/03/2026"
+  },
+  "contexto": {
+    "subsidio_mp1340": 0.32,
+    "isencao_pis_cofins": true,
+    "alerta_volatilidade": true,
+    "motivo_alta": "Tensões no Estreito de Ormuz — Brent próximo a US$ 100/barril"
+  },
+  "historico": [
+    { "semana": "24/jan", "preco": 5.98 },
+    { "semana": "31/jan", "preco": 6.02 },
+    { "semana": "07/fev", "preco": 6.08 },
+    { "semana": "14/fev", "preco": 6.12 },
+    { "semana": "21/fev", "preco": 6.05 },
+    { "semana": "28/fev", "preco": 6.15 },
+    { "semana": "07/mar", "preco": 6.15 },
+    { "semana": "14/mar", "preco": 6.89 }
+  ]
+}
